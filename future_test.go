@@ -15,7 +15,7 @@ func TestNew(t *testing.T) {
 	var (
 		a Future
 		b Future
-		f FutureFunc
+		f Futurized
 	)
 
 	f = New(add)

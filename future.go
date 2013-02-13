@@ -6,9 +6,9 @@ import (
 
 type Future chan interface{}
 
-type FutureFunc func(in ...interface{}) Future
+type Futurized func(in ...interface{}) Future
 
-func New(fn interface{}) FutureFunc {
+func New(fn interface{}) Futurized {
 	if reflect.TypeOf(fn).NumOut() != 1 {
 		panic("function must return single value")
 	}
